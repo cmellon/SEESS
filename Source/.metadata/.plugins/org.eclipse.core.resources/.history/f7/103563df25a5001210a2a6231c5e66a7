@@ -1,0 +1,274 @@
+package com.space;
+
+import java.util.ArrayList;
+
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.Texture.TextureFilter;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
+
+/**
+ * Working: 
+ * Player ship draw to screen and Control using keyboard
+ * Instant movement control with mouse/touch
+ * Enemy spawning
+ * Enemy despawn on hit
+ * Shooting
+ * Enemy despawn on laser hit
+ * Spawn equal number of Orbs 
+ * Reorganized code into separate classes
+ * Added health to enemies
+ * Added Waves of enemies
+ * Organized classes to allow for easier creation of new enemy and orb types
+ * Added Multiple screens and game over state
+ * Added orb collections, Ship Xp and level, Elemental Form xp  
+ * Added Tranformations
+ * Added Multiple projectiles and projectile types
+ * Added Fire Rates to player weapons so the player can hold down the fire button
+ * Made enemies shoot back
+ * Added player HUD
+ * Added enemy shot collisions
+ * Added proportional health bar movement
+ * 
+ * --Extensive Testing By Scott Prindel--
+ * Optimized Enemy shots by passing in main class
+ * Added smooth movement for click to move
+ * Added XP gain
+ * Added enemy collisions damage rather than player death
+ * Added timer bar and Timer bar movement proportional to time left in form
+ * Added Main menu screen selection: Mouse support and Keyboard support
+ * Added Projectile Angle support
+ * Added Epic Player Explosion on death
+ * Reformed Enemy Spawn and wave system to be based upon a limited number of enemies per wave
+ * Reformed Enemy Spawn and fire rates to be more gradual and based upon wave duration
+ * Added Post Wave Screen
+ * 
+ * Next Features:
+ * Add Multiple pages to the Post Wave Screen(multiple screens)(dont forget to declare and initialize in Space)
+ * Add in variables for Different upgrade levels 
+ * Implement Save And Load Screens
+ * Add Save Screen
+ * 
+ * 
+ * Add level ups
+ * Add health orbs
+ * 
+ * Projectile 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * Goal of the game: 
+ * The goal of the game is to level up your ship and defeat as many waves of enemies as possible.
+ * 
+ * You're the pilot of a unique ship that utilizes elemental orbs to transform and use special weapons and abilities.
+ * Kill enemies to collect as many orbs as possible. At the end of each wave there will be an opportunity to upgrade 
+ * your ship. 
+ * 
+ * Upgrade your ship and fight through the onslaught of enemy ships to get a high score. (And level your ship to become badass)
+ * 
+ * 
+ * Forms: 
+ * Fire  -- 
+ * Weapons: Flamethrower, Flame Body
+ * 
+ * Lightning -- 
+ * Weapons: Zap Cannon, Electric Blast(rename)
+ * 
+ * Wind -- 
+ * Weapons: Wind Blades, 
+ * 
+ * 
+ * Possible Upgrades:
+ *  Ship:
+ *  Health
+ *  Speed
+ *  Laser Power
+ *  
+ *  Forms:
+ *  
+ *  Fire:
+ *  Flame Form Duration
+ *  Flame Shield Health
+ *  Flamethrower Range
+ *  
+ *  
+ *  Lightning:
+ *  Lightning Form Duration
+ *  Lightning Jump length
+ *  Shock Wave 
+ *  Lightning Field
+ *  Electric Blast Range
+ *  
+ *  Wind: 
+ *  Wind Form Duration
+ *  Wind Form Speed Boost
+ *  Wind Blade Count - TRI SHOT
+ *  Wind Shield Duration
+ * 
+ * 
+ */
+ 
+public class Space extends Game {
+	 
+	//Screen Declarations
+    MainMenuScreen mainMenu;
+    NewGameScreen newGameScreen;
+    LoadGameScreen loadGameScreen;
+    SaveGameScreen saveGameScreen;
+    OptionsScreen optionsScreen;
+    NewWaveShipScreen shipScreen;
+    NewWaveFireScreen fireScreen;
+    NewWaveLightningScreen lightningScreen;
+    NewWaveWindScreen windScreen;
+    
+    GameScreen gameScreen;
+    
+    Space main;
+	static Player player;
+	
+	//Textures
+	Texture blankImg;
+	Texture shipImg;
+	Texture fireFormImg, lightningFormImg, windFormImg;
+	Texture fireEnabledImg,  lightningEnabledImg,  windEnabledImg;
+	Texture fireballImg, lightningBoltImg, windBladeImg;
+	Texture enemyImg;
+	Texture enemyLaserImg;
+	Texture laserImg;
+	Texture windImg, fireImg, lightningImg;
+	Texture backgroundImg;
+	Texture explosionImg;
+	Texture hudImg;
+	Texture healthBarImg;
+	Texture pulserImg;
+	Texture timerBarImg;
+
+	//ScreenHandling Textures
+	Texture mainMenuImg;
+	Texture mainMenuScreenGlowImg;
+	Texture saveScreenImg;
+	Texture loadScreenImg;
+	Texture shipScreenImg;
+	Texture fireScreenImg;
+	Texture lightningScreenImg;
+	Texture windScreenImg;
+
+	Texture smallGlowImg;
+	
+	//Sound laserSFX;
+	//Music backgroundMusic;
+
+   OrthographicCamera camera;
+   SpriteBatch batch;
+   
+    Texture texture;
+    Sprite sprite;
+    BitmapFont font;
+   
+
+   //Rectangle testEnemy;
+
+
+   @Override
+    public void create() {
+	   
+	   //Ships
+	   blankImg = new Texture(Gdx.files.internal("blankImg.png"));
+	   shipImg = new Texture(Gdx.files.internal("ship.png"));
+	   fireFormImg = new Texture(Gdx.files.internal("fireForm.png"));
+	   lightningFormImg = new Texture(Gdx.files.internal("lightningForm.png"));
+	   windFormImg = new Texture(Gdx.files.internal("windForm.png"));
+	   enemyImg = new Texture(Gdx.files.internal("enemy.png"));
+	   explosionImg = new Texture (Gdx.files.internal("explosion.png"));
+	   
+	   //HUD Display
+	   hudImg = new Texture(Gdx.files.internal("hud.png"));
+	   healthBarImg = new Texture(Gdx.files.internal("healthBar.png"));
+	   pulserImg = new Texture(Gdx.files.internal("pulser.png"));
+	   timerBarImg = new Texture(Gdx.files.internal("timerBar.png"));
+	   fireEnabledImg = new Texture(Gdx.files.internal("fireEnabledButton.png"));
+	   lightningEnabledImg = new Texture(Gdx.files.internal("lightningEnabledButton.png"));
+	   windEnabledImg = new Texture(Gdx.files.internal("windEnabledButton.png"));
+	   
+	   //Projectile Images
+	   laserImg = new Texture(Gdx.files.internal("laser.png"));
+	   fireballImg = new Texture(Gdx.files.internal("fireball.png"));
+	   lightningBoltImg = new Texture(Gdx.files.internal("lightningBolt.png"));
+	   windBladeImg = new Texture(Gdx.files.internal("windBlade.png"));
+	   enemyLaserImg = new Texture(Gdx.files.internal("enemyLaser.png"));
+
+		//Drops Images
+		windImg = new Texture(Gdx.files.internal("windOrb.png"));
+	  	fireImg = new Texture(Gdx.files.internal("fireOrb.png"));
+		lightningImg = new Texture(Gdx.files.internal("lightningOrb.png"));
+		
+	   //Screens Images
+	   mainMenuImg = new Texture(Gdx.files.internal("mainMenuScreen.png"));
+	   loadScreenImg = new Texture(Gdx.files.internal("loadGameScreen.png"));
+	   saveScreenImg = new Texture(Gdx.files.internal("saveGameScreen.png"));
+	   backgroundImg = new Texture(Gdx.files.internal("space.png"));
+	   mainMenuScreenGlowImg = new Texture(Gdx.files.internal("mainMenuScreenGlow.png"));
+	   shipScreenImg = new Texture(Gdx.files.internal("upgradeShipScreen.png"));
+	   fireScreenImg = new Texture(Gdx.files.internal("upgradeFireScreen.png"));
+	   lightningScreenImg = new Texture(Gdx.files.internal("upgradeLightningScreen.png"));
+	   windScreenImg = new Texture(Gdx.files.internal("upgradeWindScreen.png"));
+	   smallGlowImg = new Texture(Gdx.files.internal("nextWaveSmallGlow.png"));
+
+
+		
+		
+
+		
+		// load the drop sound effect and the rain background "music"
+	     // laserSFX = Gdx.audio.newSound(Gdx.files.internal("LASER1.wav"));
+	      //backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("music.mp3"));
+	      
+	      // start the playback of the background music immediately
+	      //backgroundMusic.setLooping(true);
+	      //backgroundMusic.play();
+	      
+		player = new Player(this);
+		
+	      // initialize camera, etc
+	      camera = new OrthographicCamera();
+	      camera.setToOrtho(false, 800, 480);
+	      
+	      batch = new SpriteBatch();
+	      
+	      
+	      
+	      
+	        texture = new Texture(Gdx.files.internal("font.png"));
+	        texture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
+
+	        TextureRegion region = new TextureRegion(texture, 0, 0, 512, 275);
+
+	        sprite = new Sprite(region);
+	        sprite.setSize(0.9f, 0.9f * sprite.getHeight() / sprite.getWidth());
+	        sprite.setOrigin(sprite.getWidth() / 2, sprite.getHeight() / 2);
+	        sprite.setPosition(-sprite.getWidth() / 2, -sprite.getHeight() / 2);
+
+	        font = new BitmapFont(Gdx.files.internal("font.fnt"), Gdx.files.internal("font.png"), false);
+	        
+            mainMenu = new MainMenuScreen(this);
+            newGameScreen = new NewGameScreen(this);
+            loadGameScreen = new LoadGameScreen(this);
+            saveGameScreen = new SaveGameScreen(this);
+            gameScreen = new GameScreen(this);
+            shipScreen = new NewWaveShipScreen(this, player);
+            fireScreen = new NewWaveFireScreen(this);
+            lightningScreen = new NewWaveLightningScreen(this);
+            windScreen = new NewWaveWindScreen(this);
+            setScreen(mainMenu); 
+            
+    }
+}

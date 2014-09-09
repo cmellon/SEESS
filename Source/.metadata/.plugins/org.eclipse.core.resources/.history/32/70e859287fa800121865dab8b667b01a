@@ -1,0 +1,35 @@
+package com.space;
+
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Rectangle;
+
+public class PlayerDA {
+	private Player player;
+	public PlayerDA (){}
+	private FileHandle file = null; 
+	boolean writeInitialized;
+	public int load(){
+		// Open file, load all variables into this player class. Overwrite static player with this player.
+		return 0;
+	}
+	public int save(Player playerSrc){
+		// Overwrite this player with static player. 
+		player = playerSrc;
+		file = Gdx.files.local("testfile.txt");
+		writeInitialized = false;
+		writeInt(player.shipXp);
+		file.writeString("Awww yea! Your append was successful!", true);
+		return 0;
+	}
+	private void writeInt(int num){
+		if(!writeInitialized){
+			file.writeString(Integer.toString(num), false);
+			writeInitialized = true;
+		}
+		else file.writeString(", " + Integer.toString(num), true);
+		
+	}
+}

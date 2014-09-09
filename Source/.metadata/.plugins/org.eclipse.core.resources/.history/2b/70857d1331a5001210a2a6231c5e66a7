@@ -1,0 +1,24 @@
+package com.space;
+
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Rectangle;
+
+public class PlayerDA {
+	private Player player;
+	public PlayerDA (){}
+	public int load(){
+		// Open file, load all variables into this player class. Overwrite static player with this player.
+		return 0;
+	}
+	public int save(Player playerSrc){
+		// Overwrite this player with static player. 
+		Space.player = playerSrc;
+		FileHandle file = Gdx.files.local("testfile.txt");
+		file.writeString("Oh hai! ^.^", false);
+		file.writeString("Success! Your append was successful!", true);
+		return 0;
+	}
+}

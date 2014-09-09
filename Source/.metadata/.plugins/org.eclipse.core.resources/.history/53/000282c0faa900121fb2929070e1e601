@@ -1,0 +1,47 @@
+package com.space;
+
+
+import java.io.*;
+import java.util.Scanner;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Rectangle;
+
+public class PlayerDA  {
+	private Player player;
+	public PlayerDA (){}
+	String fname = new String("saveGame.txt"); 
+	Scanner in;
+	boolean writeInitialized;
+	PrintWriter out;
+
+	public int save(){
+			try {
+				out = new PrintWriter(new FileWriter(fname, true));
+				out.println("Hello World");
+				out.close();
+			} 
+			catch (IOException e) {
+				// TODO Auto-generated catch block
+				return 1;
+			} //Catch for saving
+			return 0;
+	}
+	public void load(){
+		
+		try {// try opening file and starting scanner
+			
+	    	File f = new File(fname); 
+			in = new Scanner(f);
+		} 
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    String inputLine = in.nextLine();
+	    System.out.println(inputLine);
+	}
+}
+
+

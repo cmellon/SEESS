@@ -1,0 +1,366 @@
+[
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a3d1a9689f1c8e36ab64fb669df92076771c42f2",
+    "jarFileModificationDate": "2013-02-06T15:19:31.705-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "307c1cc532eabbf1d135b43e5c983c9da700449d",
+    "jarFileModificationDate": "2013-04-06T21:12:58-05:00",
+    "location": "F:\\Game Dev\\SEESS\\libs\\android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1452219d35189d95e8286a8d7a0577839f90a855",
+    "jarFileModificationDate": "2013-02-06T15:19:31.869-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d9ab18c443491faef6f49b7ae277eaecb767f144",
+    "jarFileModificationDate": "2013-02-06T15:19:31.692-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2380d475cf31c2d26437ce833246e641698cf620",
+    "jarFileModificationDate": "2013-02-06T15:19:31.704-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3fd82593e018b269862fde3c393f13f100e51e39",
+    "jarFileModificationDate": "2013-02-06T15:19:36.402-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx-backend-lwjgl",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a6573d33013fa3fd71f57c8325cca268975eec08",
+    "jarFileModificationDate": "2013-04-05T21:28:48-05:00",
+    "location": "F:\\Game Dev\\test-desktop\\libs\\gdx-backend-lwjgl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "77e1c9e49c197fe96b652743211389cb362ebb81",
+    "jarFileModificationDate": "2013-02-06T15:19:31.681-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\ext\\access-bridge-64.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4a529fcce38d6d970982cad5ff0ca4e1044f37f2",
+    "jarFileModificationDate": "2013-02-06T15:19:43.631-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a6f6aaf3979189b8b8a7915cf5fd54206666bf69",
+    "jarFileModificationDate": "2013-04-05T21:28:44-05:00",
+    "location": "F:\\Game Dev\\test\\libs\\gdx.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cf4437b2a4a56b938f2af9da2b4368076ae51344",
+    "jarFileModificationDate": "2013-02-06T15:19:31.694-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\ext\\jaccess.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx-natives",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "758b9a89ce6eef9ceba95e96858f6c83ddd0283b",
+    "jarFileModificationDate": "2013-03-15T16:26:56-05:00",
+    "location": "F:\\Game Dev\\Space-desktop\\libs\\gdx-natives.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "80881649bb8a4ce0bcbfd33b7e1a5d3b0c323354",
+    "jarFileModificationDate": "2013-03-15T16:20:52-05:00",
+    "location": "F:\\Game Dev\\Space\\libs\\gdx.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5e45facee40145ddb96d65f654d889d3c2982c18",
+    "jarFileModificationDate": "2013-02-06T15:19:42.639-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "307c1cc532eabbf1d135b43e5c983c9da700449d",
+    "jarFileModificationDate": "2013-03-02T00:02:58-06:00",
+    "location": "F:\\Android Starfighter\\libs\\android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-backend-lwjgl-natives",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cd4fc882244cac9353adaf45c0ec153eecd2fb7d",
+    "jarFileModificationDate": "2013-03-15T16:27:32-05:00",
+    "location": "F:\\Game Dev\\Space-desktop\\libs\\gdx-backend-lwjgl-natives.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "608fcc9ae6f13523f33ee44c7537d1d532c654ba",
+    "jarFileModificationDate": "2013-02-06T15:19:31.763-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "44eaf06d0533c2082d720e750022e08b3667eced",
+    "jarFileModificationDate": "2013-02-06T15:19:31.707-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx-sources",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2f8658ea552533a4d4e4e9b18f53727c4318e15c",
+    "jarFileModificationDate": "2013-04-05T21:28:42-05:00",
+    "location": "F:\\Game Dev\\test\\libs\\gdx-sources.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c4c7923b11e98bc8d1d32bfd2ff6363d212ead80",
+    "jarFileModificationDate": "2013-02-06T15:19:31.701-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\ext\\sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx-backend-android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "28d05941975e583f9a8672e34e3355f90b8b0933",
+    "jarFileModificationDate": "2013-03-01T19:21:48-06:00",
+    "location": "F:\\Android Starfighter\\libs\\gdx-backend-android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a3c453a5ee5fb7f767c34b254f1ca4a9b542766f",
+    "jarFileModificationDate": "2013-02-06T15:19:38.816-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx-backend-lwjgl",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5d218eb1edfdc494a713d2bae71d8aa3d52d0b7e",
+    "jarFileModificationDate": "2013-03-15T16:27:26-05:00",
+    "location": "F:\\Game Dev\\Space-desktop\\libs\\gdx-backend-lwjgl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-backend-lwjgl-natives",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cd4fc882244cac9353adaf45c0ec153eecd2fb7d",
+    "jarFileModificationDate": "2013-04-05T21:28:46-05:00",
+    "location": "F:\\Game Dev\\test-desktop\\libs\\gdx-backend-lwjgl-natives.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-backend-android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f06bd5c58a24dde1a5fed2078de0467f2e00ad35",
+    "jarFileModificationDate": "2013-04-05T21:28:50-05:00",
+    "location": "F:\\Game Dev\\SEESS\\libs\\gdx-backend-android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-natives",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7b75fb8b18527e84adb1d0d0024ad34b3953c6b7",
+    "jarFileModificationDate": "2013-04-05T21:28:42-05:00",
+    "location": "F:\\Game Dev\\test-desktop\\libs\\gdx-natives.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "58a896c7e7718bc91efd3ae469fbb378da247feb",
+    "jarFileModificationDate": "2013-02-06T15:19:31.766-06:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx-sources",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ff36a9e961caca97832dc79a524356d9515086c4",
+    "jarFileModificationDate": "2013-03-15T16:21:02-05:00",
+    "location": "F:\\Game Dev\\Space\\libs\\gdx-sources.jar",
+    "javaRuntime": false
+  }
+]

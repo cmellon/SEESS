@@ -1,0 +1,39 @@
+package com.space;
+
+
+import java.io.*;
+import java.util.Scanner;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Rectangle;
+
+public class PlayerDA  {
+	private Player player;
+	public PlayerDA (){}
+	String fname = new String("saveGame.dat"); 
+	Scanner in;
+	boolean writeInitialized;
+
+	public void save(){
+			out = new PrintWriter(new FileWriter("output.dat", true)); // "append mode"
+			out.println("Hello World");
+			out.close();
+	}
+	public void load(){
+		
+		try {// try opening file and starting scanner
+			
+	    	File f = new File(fname); 
+			in = new Scanner(f);
+		} 
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    String inputLine = in.nextLine();
+	    System.out.println(inputLine);
+	}
+}
+
+

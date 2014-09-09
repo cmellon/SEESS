@@ -1,0 +1,22 @@
+package com.space;
+import java.io.Serializable;
+import java.text.StringCharacterIterator;
+import java.util.*;
+import java.io.*;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Rectangle;
+
+public class PlayerDA {
+	private Player player;
+	public PlayerDA (){}
+	public int load(){
+		// Open file, load all variables into this player class. Overwrite static player with this player.
+		return 0;
+	}
+	public int save(Player playerSrc){
+		// Overwrite this player with static player. 
+		player = playerSrc;
+		return 0;
+	}
+}

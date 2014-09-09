@@ -1,0 +1,153 @@
+package com.space;
+
+
+import java.io.*;
+import java.util.Scanner;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Rectangle;
+
+public class PlayerDA  {
+	private Player player;
+	public PlayerDA (){}
+	String fname = new String("saveGame.txt"); 
+	Scanner in;
+	boolean writeInitialized;
+	PrintWriter out;
+
+	public int save(){
+			try {
+				if(Gdx.files.local(fname).exists()){//if its already there
+					FileHandle file = Gdx.files.local(fname);
+					file.delete();//delete it
+				}
+				out = new PrintWriter(new FileWriter(fname, true));//Create a new one
+
+				out.println(Long.toString(Space.player.laserFireRate));
+				out.println(Integer.toString(Space.player.shipLvl));
+				out.println(Integer.toString(Space.player.baseSpeed));
+				out.println(Double.toString(Space.player.health));
+				out.println(Double.toString(Space.player.healthMax));
+				out.println(Double.toString(Space.player.laserDamage));
+				out.println(Long.toString(Space.player.laserFireRate));
+
+				out.println(Integer.toString(Space.player.healthCost));
+				out.println(Integer.toString(Space.player.laserDamageCost));
+				out.println(Integer.toString(Space.player.laserFireRateCost));
+				out.println(Integer.toString(Space.player.velocityCost));
+
+				//Fire
+				out.println(Integer.toString(Space.player. fireFormLvl));
+				out.println(Long.toString(Space.player.fireFormDuration));
+				out.println(Integer.toString(Space.player.fireballDamage));
+				out.println(Integer.toString(Space.player.fireballVelocity));
+				out.println(Long.toString(Space.player.fireballFireRate));//second divided by number of projectiles per second
+				out.println(Integer.toString(Space.player.fireCapacity)); // number of orbs necessary to transform
+
+				out.println(Integer.toString(Space.player.fireFormDurationCost));//Upgrade costs
+				out.println(Integer.toString(Space.player.fireballDamageCost));
+				out.println(Integer.toString(Space.player.fireballFireRateCost));
+				out.println(Integer.toString(Space.player.fireballVelocityCost));
+				out.println(Integer.toString(Space.player.fireCapacityCost)); 
+
+				//Lightning
+				out.println(Integer.toString(Space.player.lightningFormLvl));
+				out.println(Double.toString(Space.player. lightningBoltDamage));
+				out.println(Integer.toString(Space.player.lightningBoltVelocity));
+				out.println(Long.toString(Space.player.lightningFormDuration));
+				out.println(Long.toString(Space.player.lightningBoltFireRate));
+				out.println(Integer.toString(Space.player.lightningCapacity));
+
+				out.println(Integer.toString(Space.player.lightningFormDurationCost ));
+				out.println(Integer.toString(Space.player.lightningDamageCost));
+
+				//Wind
+				out.println(Integer.toString(Space.player.windFormLvl));
+				out.println(Long.toString(Space.player.windFormDuration));
+				out.println(Long.toString(Space.player.windBladeFireRate));
+				out.println(Integer.toString(Space.player.windCapacity));
+				out.println(Integer.toString(Space.player.windFormSpeedBoost));
+
+				out.println(Integer.toString(Space.player.windFormDurationCost));
+				out.println(Integer.toString(Space.player.windBladeDamageCost));
+				out.println(Integer.toString(Space.player.windBladeFireRateCost));
+				out.println(Integer.toString(Space.player.windFormVelocityCost));
+				out.close();
+			} 
+			catch (IOException e) {
+				// TODO Auto-generated catch block
+				return 1;
+			} //Catch for saving
+			return 0;
+	}
+	public int load(){
+		
+		try {// try opening file and starting scanner
+			System.out.println("Loading Values...");
+	    	File f = new File(fname); 
+			in = new Scanner(f);
+			Space.player.laserFireRate = Long.parseLong(in.nextLine());
+			Space.player.shipLvl = Integer.parseInt(in.nextLine());
+			Space.player.baseSpeed = Integer.parseInt(in.nextLine());
+			Space.player.health = Double.parseDouble(in.nextLine());
+			Space.player.healthMax = Double.parseDouble(in.nextLine());
+			Space.player.laserDamage = Double.parseDouble(in.nextLine());
+			Space.player.laserFireRate = Long.parseLong(in.nextLine());
+
+			Space.player.healthCost = Integer.parseInt(in.nextLine());
+			Space.player.laserDamageCost = Integer.parseInt(in.nextLine());
+			Space.player.laserFireRateCost = Integer.parseInt(in.nextLine());
+			Space.player.velocityCost = Integer.parseInt(in.nextLine());
+
+			//Fire
+			Space.player. fireFormLvl = Integer.parseInt(in.nextLine());
+			Space.player.fireFormDuration = Long.parseLong(in.nextLine());
+			Space.player.fireballDamage = Integer.parseInt(in.nextLine());
+			Space.player.fireballVelocity = Integer.parseInt(in.nextLine());
+			Space.player.fireballFireRate = Long.parseLong(in.nextLine());
+			Space.player.fireCapacity = Integer.parseInt(in.nextLine());
+
+			Space.player.fireFormDurationCost = Integer.parseInt(in.nextLine());
+			Space.player.fireballDamageCost = Integer.parseInt(in.nextLine());
+			Space.player.fireballFireRateCost = Integer.parseInt(in.nextLine());
+			Space.player.fireballVelocityCost = Integer.parseInt(in.nextLine());
+			Space.player.fireCapacityCost = Integer.parseInt(in.nextLine()); 
+
+			//Lightning
+			Space.player.lightningFormLvl = Integer.parseInt(in.nextLine());
+			Space.player. lightningBoltDamage = Double.parseDouble(in.nextLine());
+			Space.player.lightningBoltVelocity = Integer.parseInt(in.nextLine());
+			Space.player.lightningFormDuration = Long.parseLong(in.nextLine());
+			Space.player.lightningBoltFireRate = Long.parseLong(in.nextLine());
+			Space.player.lightningCapacity = Integer.parseInt(in.nextLine());
+
+			Space.player.lightningFormDurationCost = Integer.parseInt(in.nextLine());
+			Space.player.lightningDamageCost = Integer.parseInt(in.nextLine());
+
+			//Wind
+			Space.player.windFormLvl = Integer.parseInt(in.nextLine());
+			Space.player.windFormDuration = Long.parseLong(in.nextLine());
+			Space.player.windBladeFireRate = Long.parseLong(in.nextLine());
+			Space.player.windCapacity = Integer.parseInt(in.nextLine());
+			Space.player.windFormSpeedBoost = Integer.parseInt(in.nextLine());
+
+			Space.player.windFormDurationCost = Integer.parseInt(in.nextLine());
+			Space.player.windBladeDamageCost = Integer.parseInt(in.nextLine());
+			Space.player.windBladeFireRateCost = Integer.parseInt(in.nextLine());
+			Space.player.windFormVelocityCost = Integer.parseInt(in.nextLine());
+		} 
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		    in.close();
+			return 1;
+		}
+	    in.close();
+	    System.out.println("Load Complete!");
+	    return 0;
+	}
+	
+}
+
+

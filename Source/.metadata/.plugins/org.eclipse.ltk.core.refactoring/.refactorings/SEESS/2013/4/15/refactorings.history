@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SEESS/assets/HUD.png&apos; to &apos;headsUpDisplay.png&apos;" description="Rename resource &apos;HUD.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/HUD.png" name="headsUpDisplay.png" stamp="1365376638506" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;SEESS/res/layout/activity_main.xml&apos; to &apos;display_main.xml&apos;" description="Rename resource &apos;activity_main.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/layout/activity_main.xml" name="display_main.xml" stamp="1365379742811" updateReferences="true"/>
+</session>

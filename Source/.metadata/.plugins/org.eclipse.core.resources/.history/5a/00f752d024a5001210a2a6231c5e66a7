@@ -1,0 +1,88 @@
+package com.space;
+import java.io.Serializable;
+import java.text.StringCharacterIterator;
+import java.util.*;
+import java.io.*;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Rectangle;
+
+public class PlayerDA implements Serializable{
+	public Space imageLib;
+	private Texture shipImg;
+
+	private long second = 1000000000;
+
+	//Upgrades
+	//Ship
+	public int shipLvl = 1;
+	public int baseSpeed = 100;
+	public double healthMax = 100;
+	public double laserDamage = 1;
+	private long laserFireRate= (long)(second/5);
+
+	public int healthCost = 40;
+	public int laserDamageCost = 100;
+	public int laserFireRateCost = 50;
+	public int velocityCost = 20;
+
+	//Fire
+	public int  fireFormLvl = 1;
+	public long fireFormDuration = 5*second;
+	public int fireballDamage = 8;
+	public int fireballVelocity = 300;
+	public long fireballFireRate = (long)(second/4);//second divided by number of projectiles per second
+	public int fireCapacity = 5; // number of orbs necessary to transform
+
+	public int fireFormDurationCost = 25;//Upgrade costs
+	public int fireballDamageCost = 30;
+	public int fireballFireRateCost = 15;
+	public int fireballVelocityCost = 10;
+	public int fireCapacityCost = 5; 
+
+	//Lightning
+	public int lightningFormLvl = 1;
+	public double lightningBoltDamage = .3;
+	public int lightningBoltVelocity = 1200;
+	public long lightningFormDuration =  5*second;
+	public long lightningBoltFireRate = (long)(second/10);
+	public int lightningCapacity = 5;
+
+	public int lightningFormDurationCost = 25;
+	public int lightningDamageCost = 50;
+
+	//Wind
+	public int windFormLvl = 1;
+	public long windFormDuration = 5*second; 
+	public long windBladeFireRate = (long)(second/8);
+	public int windCapacity = 5;
+	public int windFormSpeedBoost = 100;
+
+	public int windFormDurationCost = 25;
+	public int windBladeDamageCost = 30;
+	public int windBladeFireRateCost = 10;
+	public int windFormVelocityCost = 15;
+
+	//Stats
+	public int shipXp =0;
+	public int fireFormXp=0;
+	public int windFormXp=0;
+	public int lightningFormXp=0;
+	public int careerKills=0;
+
+	public int genericOrbs = 0;
+	public int spendableFireOrbs = 0;
+	public int spendableWindOrbs = 0;
+	public int spendableLightningOrbs = 0;
+	public int fireOrbs = 0;
+	public int windOrbs = 0;
+	public int lightningOrbs = 0;
+
+
+
+	public int speed = baseSpeed;
+	
+	public PlayerDA (){
+		
+	}
+}

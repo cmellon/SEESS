@@ -1,0 +1,17 @@
+1364156585242	Rename field 'currentState'
+1364172268776	Rename local variable 'main'
+1364182016250	Rename field 'lastShotTime'
+1364183746642	Encapsulate field 'shipXp'
+1364185076193	Rename field 'main'
+1364254337092	Rename field 'increment'
+1364283847047	Delete element
+1364286890031	Rename local variable 'enemyNumber'
+1364338613728	Delete element
+1364339535885	Rename field 'main'
+1364362109544	Delete element
+1364370107107	Rename field 'healthBarPosModMax'
+1364600997300	Rename type 'MainMenu'
+1364617623145	Rename type 'NewWaveScreen'
+1364617667949	Delete element
+1364618382517	Move compilation unit
+1364618427621	Move compilation unit
